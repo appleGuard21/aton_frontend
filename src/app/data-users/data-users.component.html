@@ -1,0 +1,13 @@
+<div>
+  <button mat-raised-button (click)="openDialog()">
+    Add Data
+    <mat-icon>add</mat-icon>
+  </button>
+  <div *ngIf="dataUsers.length<1">
+    <p class="noDataText">There is no users data yet</p>
+  </div>
+  <div *ngFor="let dataUser of dataUsers">
+    <app-data-user [dataUser]="dataUser" (deleteEvent)="deleteDataUser($event)"></app-data-user>
+  </div>
+</div>
+

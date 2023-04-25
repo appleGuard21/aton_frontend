@@ -1,0 +1,25 @@
+<mat-toolbar>
+  <a class="name" routerLink="start">Test App</a>
+  <div *ngIf="isLoggedIn">
+    <a class="link" routerLink="table" routerLinkActive="active">Table</a>
+    <a class="link" routerLink="data" routerLinkActive="active">Handle data</a>
+  </div>
+  <span class="spacer"></span>
+  <div *ngIf="isLoggedIn; else notAuth">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="logout()">
+        <span style="margin-right: 8px">Logout</span>
+        <mat-icon>exit_to_app</mat-icon>
+      </button>
+    </mat-menu>
+  </div>
+  <ng-template #notAuth>
+    <div>
+      <button mat-button type="button" (click)="toLogin()">Sign in</button>
+      <button class="signUp" mat-raised-button type="button" (click)="toRegister()">Sign up</button>
+    </div>
+  </ng-template>
+</mat-toolbar>

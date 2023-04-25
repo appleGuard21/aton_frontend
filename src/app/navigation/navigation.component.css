@@ -1,0 +1,21 @@
+.spacer {
+  flex: 1 1 auto;
+}
+.link {
+  font-size: 16px;
+  margin-right: 32px;
+  opacity: 50%;
+}
+.name {
+  margin-right: 48px;
+}
+.active{
+  opacity: 100%;
+}
+.signUp {
+  border-radius: 32px;
+}
+ a {
+   color: black;
+   text-decoration: none;
+ }

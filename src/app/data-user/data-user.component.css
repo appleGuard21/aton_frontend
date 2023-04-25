@@ -1,0 +1,16 @@
+.dataBox {
+  border: solid 1px black;
+  padding: 16px 16px;
+  border-radius: 16px;
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  margin: 16px auto;
+}
+.name{
+  font-size: 18px;
+}
+.job{
+  font-size: 14px;
+  opacity: 50%;
+}

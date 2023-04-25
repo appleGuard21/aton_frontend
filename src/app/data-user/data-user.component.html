@@ -1,0 +1,16 @@
+<div class="dataBox">
+  <div>
+    <p class="name">{{dataUser.name}}</p>
+    <p class="job">{{dataUser.job}}</p>
+  </div>
+  <div style="align-self: end">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item type="button" (click)="openDialog()">Edit</button>
+      <button mat-menu-item type="button" (click)="deleteData()">Delete</button>
+    </mat-menu>
+  </div>
+</div>
+
